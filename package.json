@@ -1,0 +1,26 @@
+{
+  "name": "displayandroid",
+  "version": "1.0.0",
+  "description": "display for the 0q screens in offices",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "watchify js/components/App.js -v -t [ babelify --presets [ react es2015 ] ] -o js/bundle.js"
+  },
+  "keywords": [
+    "0q",
+    "display",
+    "android"
+  ],
+  "author": "Ignacio Ureta",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "watchify": "^3.7.0"
+  }
+}
