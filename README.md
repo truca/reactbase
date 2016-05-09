@@ -9,3 +9,8 @@ to run:
 and then open the index.html file. 
 
 If everything is ok, you should see the "Hello World!" message in the browser.
+
+To Do:
+- Add react-router
+- Add SASS
+- Add redux
