@@ -15,12 +15,14 @@
   "author": "Ignacio Ureta",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.11.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-router": "^2.4.0",
     "watchify": "^3.7.0"
   }
 }
