@@ -1,66 +1,40 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router'
 import axios from 'axios'
+import socket from '../network.js';
+import { Provider } from 'react-redux';
+import store from '../reducers/store.js';
+import _ from 'underscore'
+import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
+import LocalList from './LocalList.js'
+import Local from './Local.js'
 
-var MainLayout = React.createClass({
-	
-	render(){
-		return (
-			<div>
-				Main Layout
-				<Link to="/">Home</Link>
-				<Link to="/users">Users</Link>
-				<Link to="/users/nacho">Nacho</Link>
-				{this.props.children}
-			</div>
-		)
-	}
-});
 
-var Home = React.createClass({
-	
-	render(){
-		return (
-			<div>
-				Home
-			</div>
-		)
-	}
-});
+function Nav(){
+	return (<div>Nav</div>);
+}
 
-var User = React.createClass({
-	
-	render(){
-		return (
-			<div>
-				User
-				{this.props.children}
-			</div>
-		)
-	}
-});
+function MainLayout(props){
+	return (
+		<div>
+			<Nav></Nav>
+			{props.children}
+		</div>
+	)
+}
 
-var UserChild = React.createClass({
-	
-	render(){
-		return (
-			<div>
-				User Child {this.props.params.userId}
-			</div>
-		)
-	}
-});
 
-render((
-  	<Router history={hashHistory}>
-		<Route component={MainLayout}>
-			<Route path="/" component={Home} />
-			<Route path="users" component={User}>
-				<Route path=":userId" component={UserChild} />
+
+render(
+	<Provider store={store}>
+		<Router history={hashHistory}>
+			<Route component={MainLayout}>
+				<Route path="/" component={LocalList} />
+				<Route path="local">
+					<Route path=":localId" component={Local} />
+				</Route>
 			</Route>
-		</Route>
-	</Router>
-	),
+		</Router>
+	</Provider>,
   	document.getElementById('app')
 );
