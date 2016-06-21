@@ -7,10 +7,10 @@ let socket = new Socket('ws://zeroq.ml:4000/socket', {params: {token: window.use
 socket.connect();
 
 // Now that you are connected, you can join channels with a topic:
-let channel = socket.channel("notify:1", {})
+/*let channel = socket.channel("notify:1", {})
 channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
-  .receive("error", resp => { console.log("Unable to join", resp) })
+  .receive("error", resp => { console.log("Unable to join", resp) })*/
 
 /*let sendy = $("#sendy")
 sendy.on("click", event => {

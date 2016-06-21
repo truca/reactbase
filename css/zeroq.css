@@ -1,0 +1,13 @@
+*{
+	font-family: 'Hind', sans-serif;
+}
+
+.bg-blue{ background-color: rgb(11, 86, 146) }
+.bg-pink{ background-color: rgb(230, 0, 126) }
+.bg-white{ background-color: white; }
+.bg-grey{ background-color: lightgrey; }
+
+.white{color: white}
+.blue{color: rgb(11, 86, 146);}
+.pink{color: rgb(230, 0, 126);}
+.black{color: black;}
