@@ -2,8 +2,8 @@ import React from 'react'
 import _ from 'underscore'
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { fetchLocalsRequest, fetchLocalsSuccess, fetchLocalsFailure, 
-	filterByNameSet, filterByNameReset, setLocal } from '../actions/actions.js';
+import { fetchLocalsRequest, fetchLocalsSuccess, fetchLocalsFailure,
+	filterByNameSet, filterByNameReset, setLocal } from '../actions/Local.actions.js';
 import store from '../reducers/store.js';
 
 <Link to="/users/nacho">Nacho</Link>
@@ -29,7 +29,7 @@ var LocalList = React.createClass({
 					})}
 				</div>
 			</div>
-		)	
+		)
 	}
 })
 

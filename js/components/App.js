@@ -8,8 +8,8 @@ import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
 import LocalList from './LocalList.js'
 import Local from './Local.js'
 import Tickets from './Tickets.js'
-import { fetchLocalsRequest, fetchLocalsSuccess, fetchLocalsFailure, 
-	filterByNameSet, filterByNameReset } from '../actions/actions.js';
+import { fetchLocalsRequest, fetchLocalsSuccess, fetchLocalsFailure,
+	filterByNameSet, filterByNameReset } from '../actions/Locals.actions.js';
 import '../Utils.js';
 import store from '../reducers/store.js';
 
@@ -27,7 +27,7 @@ var Nav = React.createClass({
 					<i className="fa fa-chevron-right forward" aria-hidden="true"></i>
 				</Link>
 			</div>
-		);	
+		);
 	}
 });
 

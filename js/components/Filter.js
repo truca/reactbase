@@ -1,6 +1,6 @@
 import React from 'react'
 import { fetchDistrictsRequest, fetchDistrictsSuccess, fetchDistrictsFailure,
-	fetchCategoriesRequest, fetchCategoriesSuccess, fetchCategoriesFailure} from '../actions/actions.js';
+	fetchCategoriesRequest, fetchCategoriesSuccess, fetchCategoriesFailure} from '../actions/Locals.actions.js';
 
 var Filter = React.createClass({
 	componentDidMount(){
