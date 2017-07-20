@@ -1,7 +1,7 @@
 
-export const FETCH_LOCAL_REQUEST = 'FETCH_LOCAL_REQUEST'; 
-export const FETCH_LOCAL_SUCCESS = 'FETCH_LOCAL_SUCCESS';
-export const FETCH_LOCAL_FAILURE = 'FETCH_LOCAL_FAILURE';
+export const FETCH_REPO_REQUEST = 'FETCH_REPO_REQUEST'; 
+export const FETCH_REPO_SUCCESS = 'FETCH_REPO_SUCCESS';
+export const FETCH_REPO_FAILURE = 'FETCH_REPO_FAILURE';
 
 export const FETCH_QUEUES_REQUEST = 'FETCH_QUEUES_REQUEST'; 
 export const FETCH_QUEUES_SUCCESS = 'FETCH_QUEUES_SUCCESS';
@@ -11,15 +11,15 @@ export const TICKET = 'TICKET';
 export const LAST_TICKET = 'LAST_TICKET';
 export const LAST_CALL = 'LAST_CALL';
 
-//Local
-export function fetchLocalRequest() {
-  return { type: FETCH_LOCAL_REQUEST }
+//Repo
+export function fetchRepoRequest() {
+  return { type: FETCH_REPO_REQUEST }
 }
-export function fetchLocalSuccess(local) {
-  return { type: FETCH_LOCAL_SUCCESS, local: local }
+export function fetchRepoSuccess(repo) {
+  return { type: FETCH_REPO_SUCCESS, repo }
 }
-export function fetchLocalFailure(error) {
-  return { type: FETCH_LOCAL_FAILURE, error: error }
+export function fetchRepoFailure(error) {
+  return { type: FETCH_REPO_FAILURE, error: error }
 }
 export function fetchQueuesRequest() {
   return { type: FETCH_QUEUES_REQUEST }

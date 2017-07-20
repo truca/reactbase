@@ -10,7 +10,7 @@ var Tickets = React.createClass({
 	render(){
 		return (
 			<div className="bg-grey content">
-				<div className="bg-white locals centered">
+				<div className="bg-white repos centered">
 					<h2>Tickets</h2>
 					
 				</div>

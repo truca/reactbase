@@ -1,10 +1,10 @@
 React base built with browserify.
 
-it supports ES2015
+it supports ES6
 
 to run:
-- npm install
-- npm start
+- yarn
+- yarn start
 
 and then open the index.html file. 
 

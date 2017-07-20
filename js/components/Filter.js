@@ -1,6 +1,6 @@
 import React from 'react'
 import { fetchDistrictsRequest, fetchDistrictsSuccess, fetchDistrictsFailure,
-	fetchCategoriesRequest, fetchCategoriesSuccess, fetchCategoriesFailure} from '../actions/Locals.actions.js';
+	fetchCategoriesRequest, fetchCategoriesSuccess, fetchCategoriesFailure} from '../actions/Repos.actions.js';
 
 var Filter = React.createClass({
 	componentDidMount(){
@@ -27,7 +27,7 @@ var Filter = React.createClass({
 
 const mapFiltersToProps = function(store) {
   return {
-    locals: store.localsState.locals
+    repos: store.reposState.repos
   };
 }
 

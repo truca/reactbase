@@ -7,8 +7,8 @@ export const FETCH_TICKETS_FAILURE = 'FETCH_TICKETS_FAILURE';
 export function fetchTicketRequest() {
   return { type: FETCH_TICKETS_REQUEST }
 }
-export function fetchTicketSuccess(local) {
-  return { type: FETCH_TICKETS_SUCCESS, local: local }
+export function fetchTicketSuccess(repo) {
+  return { type: FETCH_TICKETS_SUCCESS, repo: repo }
 }
 export function fetchTicketFailure(error) {
   return { type: FETCH_TICKETS_FAILURE, error: error }

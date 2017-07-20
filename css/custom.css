@@ -1,4 +1,10 @@
 /*General*/
+.repos > a{
+	width: 100%;
+    display: block;
+	font-size: 1.5em;
+    margin: 5px 0;
+}
 button{
 	display: block;
 	border: none;
@@ -6,7 +12,7 @@ button{
 /*Nav*/
 #nav{ padding: 10px 0; }
 img.logo{
-	width: 150px;
+	height: 55px;
 }
 i.back{
 	font-size: 35px;
@@ -26,14 +32,16 @@ i.forward{
 	height: 100vh;	
 	padding-top: 20px;
 }
-div.local, div.locals{
-	width: 500px;
+div.repo, div.repos{
 	margin-top: 30px;
 	padding: 15px;
 	box-shadow: 5px 5px grey;
 	min-height: 300px;
 }
-.local h2{
+.repo h2{
 	text-align: center;
     margin-bottom: 20px;
+}
+.repo h4{
+	text-align: center;
 }
