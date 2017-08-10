@@ -24,7 +24,7 @@ var RepoList = React.createClass({
 			<div className="bg-grey content">
 				<div className="bg-white repos centered">
 					<h2>Repos</h2>
-					{R.map((repo, i) => (<RepoItem key={i} repo={repo}></RepoItem>), this.props.repos)}
+					{R.map((repo, i) => (<RepoItem key={repo.id} repo={repo}></RepoItem>), this.props.repos)}
 				</div>
 			</div>
 		)

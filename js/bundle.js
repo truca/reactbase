@@ -210,57 +210,19 @@ var _store2 = _interopRequireDefault(_store);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Nav = _react2.default.createClass({
-	displayName: 'Nav',
-	back: function back() {
-		this.context.router.goBack();
-	},
-	render: function render() {
-		return _react2.default.createElement(
-			'div',
-			{ id: 'nav', className: 'bg-white' },
-			_react2.default.createElement('i', { className: 'fa fa-chevron-left back', 'aria-hidden': 'true', onClick: this.back }),
-			_react2.default.createElement('img', { className: 'centered logo', src: 'img/logo.png' })
-		);
-	}
-});
-
-var Filter = _react2.default.createClass({
-	displayName: 'Filter',
-	filterByNameSet: function filterByNameSet() {
-		_store2.default.dispatch((0, _ReposActions.filterByNameSet)(this.refs.search));
-	},
-	render: function render() {
-		_react2.default.createElement('input', { ref: 'search', type: 'text', placeholder: 'B\xFAsqueda', onChange: this.filterByNameSet });
-	}
-});
-
-function MainLayout(props) {
-	return _react2.default.createElement(
-		'div',
-		null,
-		_react2.default.createElement(Nav, null),
-		props.children
-	);
-}
-
 (0, _reactDom.render)(_react2.default.createElement(
 	_reactRedux.Provider,
 	{ store: _store2.default },
 	_react2.default.createElement(
 		_reactRouter.Router,
 		{ history: _reactRouter.hashHistory },
+		_react2.default.createElement(_reactRouter.Route, { path: '/', component: _RepoList2.default }),
 		_react2.default.createElement(
 			_reactRouter.Route,
-			{ component: MainLayout },
-			_react2.default.createElement(_reactRouter.Route, { path: '/', component: _RepoList2.default }),
-			_react2.default.createElement(
-				_reactRouter.Route,
-				{ path: 'repo' },
-				_react2.default.createElement(_reactRouter.Route, { path: ':repoId', component: _Repo2.default })
-			),
-			_react2.default.createElement(_reactRouter.Route, { path: 'tickets', component: _Tickets2.default })
-		)
+			{ path: 'repo' },
+			_react2.default.createElement(_reactRouter.Route, { path: ':repoId', component: _Repo2.default })
+		),
+		_react2.default.createElement(_reactRouter.Route, { path: 'tickets', component: _Tickets2.default })
 	)
 ), document.getElementById('app'));
 
@@ -402,7 +364,7 @@ var RepoList = _react2.default.createClass({
 					'Repos'
 				),
 				_ramda2.default.map(function (repo, i) {
-					return _react2.default.createElement(RepoItem, { key: i, repo: repo });
+					return _react2.default.createElement(RepoItem, { key: repo.id, repo: repo });
 				}, this.props.repos)
 			)
 		);

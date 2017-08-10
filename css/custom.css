@@ -30,10 +30,10 @@ i.forward{
 .content{
 	min-height: 100vh;
 	height: 100vh;	
-	padding-top: 20px;
+	/*padding-top: 20px;*/
 }
 div.repo, div.repos{
-	margin-top: 30px;
+	/*margin-top: 30px;*/
 	padding: 15px;
 	box-shadow: 5px 5px grey;
 	min-height: 300px;
